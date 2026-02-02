@@ -1,0 +1,238 @@
+
+ELECTRICITY BILLING SYSTEM 
+                    -23MCCE20
+1. config.php
+- Database connection setup
+- Session management
+- Validation functions (Task 1 requirements)
+- Computation functions (slab rates, fines)
+- Utility functions (phone formatting, sanitization)
+
+2. setup_database.php
+- Creates 'electricity' database
+- Creates all necessary tables
+- Inserts default users (admin, worker)
+- Sets up minimum charges table
+
+3. update_database.php
+- Creates payment-related tables if missing
+- Adds new columns to existing tables
+- Synchronizes data between tables
+
+4. login.php
+FEATURES:
+- Multi-role login (admin, worker, customer)
+- Test credentials display
+- Task 1 billing system link
+- Session management
+ROLES:
+- Admin: admin/admin123
+- Worker: worker/worker123
+- Customer: customer1/customer123
+
+5. logout.php
+FUNCTION: Clears session data and redirects to login
+
+
+6. admin.php (ADMIN DASHBOARD)
+FUNCTIONALITIES:
+- Register new customers
+- View all customers
+- Edit/delete customer records
+- Access to all system features
+- Customer management with validation
+- Transaction support for data integrity
+- Responsive interface
+
+7. worker.php (WORKER DASHBOARD)
+FUNCTIONALITIES:
+- View statistics (customers, readings)
+- Quick actions for common tasks
+- Recent readings display
+- Worker instructions
+- Auto-refresh every 5 minutes
+- Intuitive interface for field work
+- Direct links to meter reading and billing
+
+8. customer.php (CUSTOMER DASHBOARD)
+FUNCTIONALITIES:
+- View personal profile
+- Check billing summary
+- View all electricity bills
+- Track payments
+- View payment history
+- Bill filtering and search
+- Payment status tracking
+- Contact information display
+
+
+9. generate_bill.php (REGULAR BILLING)
+FEATURES:
+- Customer lookup by meter number
+- Reading validation
+- Bill calculation with:
+  * Category-specific rates
+  * Minimum charges
+  * GST calculation
+  * Previous due carryover
+  * Late payment fines
+- Bill preview before saving
+- Meter reset detection
+
+10. generate_bill_task1.php:
+1. INPUT:
+   - Unique service number validation
+   - Alphabets-only name validation
+   - 10-digit phone validation
+2. VALIDATION:
+   - Reject duplicate service numbers
+   - Reject invalid names/phones
+3. COMPUTATION:
+   - Slab rates: 1.5, 2.5, 3.5, 4.5
+   - Minimum charge: ₹25 for 0 units
+   - Fine: ₹150 for previous dues
+4. OUTPUT:
+   - Complete bill display
+   - Due date with/without fine
+FEATURES:
+- Real-time validation
+- Rate table display
+- Requirements summary
+
+11. add_reading.php:
+FEATURES:
+- Add new readings
+- Update existing readings
+- Reading history display
+- Month/year selection
+- Validation for readings
+
+12. make_payment.php:
+FEATURES:
+- Partial/full payment acceptance
+- Multiple payment methods
+- Transaction recording
+- Payment history tracking
+- Refund/cancellation support
+- Amount slider for easy selection
+
+13. view_bills.php:
+FEATURES:
+- View all system bills
+- Filter by status (pending, paid, etc.)
+- Search functionality
+- Bill statistics
+- Delete paid bills
+- Mark bills as paid
+
+14. view_customers.php
+FEATURES:
+- List all customers
+- Quick actions (manage bills, edit)
+- Customer details at a glance
+- Delete functionality
+
+15. edit_customer.php:
+INTENDED FUNCTIONALITY:
+- Edit customer information
+- Update contact details
+- Modify category
+
+16. delete_customer.php
+FEATURES:
+- Transaction-based deletion
+- Cascading delete (bills, readings, payments)
+- Admin-only access
+- Data integrity maintenance
+
+17. print_bill.php
+PURPOSE: Bill printing and display
+FEATURES:
+- Professional bill formatting
+- Print-friendly styling
+- Customer information display
+- Meter reading details
+- Bill calculation breakdown
+- Auto-print option
+
+18. print_bill_task1.php
+FEATURES:
+- Task 1 rate breakdown display
+- Slab-wise calculation details
+- Requirement compliance notes
+- Professional formatting
+
+19. payment_history.php
+FEATURES:
+- View all payments
+- Payment method details
+- Transaction history
+- Total payments summary
+
+20. manage_bills.php:
+FEATURES:
+- View customer's all bills
+- Payment options
+- Bill status overview
+
+21. style.css
+
+22. setup_minimum_charges.php
+FEATURES:
+- Create minimum_charges table
+- Insert default charges
+- Category-specific minimum billing
+
+23. setup_customer.php
+PURPOSE: Customer registration 
+
+24. save.php
+PURPOSE: Data saving 
+
+25. reading.php
+PURPOSE: Reading submission 
+
+
+ADMIN DASHBOARD (admin.php)
+1. Customer Management
+   - Register new customers
+   - Update customer information
+   - Delete customer records
+2. System Oversight
+   - Monitor all bills
+   - Process payments
+   - Generate reports
+3. Configuration
+   - Set billing parameters
+   - Manage system settings
+
+WORKER DASHBOARD (worker.php)
+1. Meter Reading
+   - Record daily readings
+   - Update existing readings
+   - Verify meter information
+2. Bill Generation
+   - Create bills for customers
+   - Handle billing queries
+   - Process basic payments
+3. Customer Interaction
+   - Address customer concerns
+   - Provide billing information
+   - Report issues
+
+CUSTOMER DASHBOARD (customer.php)
+KEY FUNCTIONALITIES:
+1. Account Management
+   - View personal information
+   - Check contact details
+   - Update preferences
+2. Billing Information
+   - View all bills
+   - Check payment status
+   - Download/print bills
+3. Payment Tracking
+   - View payment history
+   - Check due amounts
+   - Track payment status
+
+
